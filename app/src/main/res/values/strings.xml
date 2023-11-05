@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">EBooker</string>
+    <string name="login">Đăng nhập</string>
+    <string name="login_w_facebook">Đăng nhập bằng Facebook</string>
+    <string name="register">Đăng kí</string>
+    <string name="phonenum_email">Số điện thoại/Email</string>
+    <string name="hint_phone_email">Nhập số điện thoại hoặc email</string>
+    <string name="password">Mật Khẩu</string>
+    <string name="hint_password">Nhập mật khẩu</string>
+    <string name="OTP">OTP</string>
+    <string name="hint_OTP">Nhập mã OTP</string>
+    <string name="forget_password">Quên mật khẩu ?</string>
+    <string name="rule">Bằng việc đăng ký, bạn đã đồng ý về Điều khoản dịch vụ và Chính sách bảo mật</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="brand_name">EBooker</string>
+    <string name="hint_searching">Sản phẩm cần tìm</string>
+</resources>

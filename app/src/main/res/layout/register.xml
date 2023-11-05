@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rectangle_1"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:background="@drawable/rectangle_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <TextView
+            android:id="@+id/phonenum_email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/phonenum_email"
+            android:textAppearance="@style/title"
+            app:layout_constraintStart_toStartOf="@id/rectangle_1"
+            app:layout_constraintTop_toTopOf="@id/rectangle_1"/>
+
+        <EditText
+            android:id="@+id/phonenum_email_input"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rectangle_3"
+            android:drawableLeft="@drawable/account"
+            android:hint="@string/hint_phone_email"
+            android:textAppearance="@style/hint"
+            app:layout_constraintStart_toStartOf="@id/rectangle_1"
+            app:layout_constraintTop_toBottomOf="@+id/phonenum_email_label" />
+
+        <TextView
+            android:id="@+id/OTP_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/OTP"
+            android:textAppearance="@style/title"
+            app:layout_constraintStart_toStartOf="@id/rectangle_1"
+            app:layout_constraintTop_toBottomOf="@id/phonenum_email_input" />
+
+        <EditText
+            android:id="@+id/OTP_input"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_3"
+            android:drawableLeft="@drawable/vector"
+            android:hint="@string/hint_OTP"
+            android:textAppearance="@style/hint"
+            app:layout_constraintStart_toStartOf="@id/rectangle_1"
+            app:layout_constraintTop_toBottomOf="@+id/OTP_label" />
+
+        <TextView
+            android:id="@+id/password_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/password"
+            android:textAppearance="@style/title"
+            app:layout_constraintStart_toStartOf="@id/rectangle_1"
+            app:layout_constraintTop_toBottomOf="@id/OTP_input" />
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_3"
+            android:drawableLeft="@drawable/password"
+            android:drawableRight="@drawable/eye_slash"
+            android:hint="@string/hint_password"
+            android:textAppearance="@style/hint"
+            app:layout_constraintStart_toStartOf="@id/rectangle_1"
+            app:layout_constraintTop_toBottomOf="@+id/password_label" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/green78"
+            android:elevation="4dp"
+            android:text="@string/register"
+            app:layout_constraintEnd_toEndOf="@id/rectangle_1"
+            app:layout_constraintStart_toStartOf="@id/rectangle_1"
+            app:layout_constraintTop_toBottomOf="@id/password_input" />
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/rule"
+            android:textAppearance="@style/small_hint"
+            app:layout_constraintEnd_toEndOf="@id/rectangle_1"
+            app:layout_constraintStart_toStartOf="@id/rectangle_1"
+            app:layout_constraintTop_toBottomOf="@id/register_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
