@@ -1,6 +1,7 @@
 package com.example.ebooker.view.adapter;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ebooker.MainActivity;
@@ -55,17 +57,22 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.DataVi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HomeListAdapter.DataViewHolder  holder, int position) {
+    public void onBindViewHolder(@NonNull HomeListAdapter.DataViewHolder holder, int position) {
         holder.book_name.setText(books.get(position).getName());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BookDetailFragment bookDetailFragment = new BookDetailFragment(books.get(position));
+                Book book = books.get(position);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("book", book);
+                Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_bookDetailFragment2, bundle);
 
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.main_activity, bookDetailFragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+//                BookDetailFragment bookDetailFragment = new BookDetailFragment(books.get(position));
+//
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.main_activity, bookDetailFragment);
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
             }
         });
     }
@@ -74,7 +81,6 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.DataVi
     public int getItemCount() {
         return books.size();
     }
-
 
 
     public static class DataViewHolder extends RecyclerView.ViewHolder {

@@ -14,17 +14,21 @@ import com.example.ebooker.R;
 import com.example.ebooker.model.Book;
 
 public class BookDetailFragment extends Fragment {
-    private Book book;
-
-    public BookDetailFragment(Book book) {
-        this.book = book;
-    }
+//    private Book book;
+//
+//    public BookDetailFragment(Book book) {
+//        this.book = book;
+//    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.book_details, container, false);
         TextView book_name = view.findViewById(R.id.book_name);
+
+        Bundle bundle = getArguments();
+        Book book = bundle.getSerializable("book", Book.class);
+
         book_name.setText(book.getName());
         return view;
     }
