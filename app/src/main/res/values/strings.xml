@@ -15,4 +15,13 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="brand_name">EBooker</string>
     <string name="hint_searching">Sản phẩm cần tìm</string>
+    <string name="user_name">Tên khách hàng</string>
+    <string name="user_email">Email</string>
+    <string name="user_address">Địa chỉ</string>
+    <string name="book_name">Tên sách</string>
+    <string name="book_price">Giá sách</string>
+    <string name="store">Cửa hàng</string>
+    <string name="day_buy">Ngày mua</string>
+    <string name="state">Trạng thái</string>
+    <string name="vouchers">Vouchers</string>
 </resources>

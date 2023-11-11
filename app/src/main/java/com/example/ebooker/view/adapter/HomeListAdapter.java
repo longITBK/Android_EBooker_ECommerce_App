@@ -14,7 +14,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ebooker.MainActivity;
 import com.example.ebooker.R;
 import com.example.ebooker.model.Book;
 import com.example.ebooker.view.fragment.BookDetailFragment;
@@ -91,7 +90,7 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.DataVi
         public DataViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            book_name = (TextView) itemView.findViewById(R.id.book_name);
+            book_name = (TextView) itemView.findViewById(R.id.book_name_label);
             cardView = (CardView) itemView.findViewById(R.id.book_container);
         }
     }
