@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.example.ebooker.view.fragment.BookDetailFragment"
+        android:label="BookDetailFragment"
+        tools:layout="@layout/book_details">
+        <argument
+            android:name="book"
+            app:argType="com.example.ebooker.model.Book" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.ebooker.view.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/home">
+        <action
+            android:id="@+id/action_homeFragment_to_bookDetailFragment2"
+            app:destination="@id/bookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.ebooker.view.fragment.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/notification"/>
+    <fragment
+        android:id="@+id/shoppingCartFragment"
+        android:name="com.example.ebooker.view.fragment.ShoppingCartFragment"
+        android:label="ShoppingCartFragment"
+        tools:layout="@layout/shopping_cart"/>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.ebooker.view.fragment.AccountFragment"
+        android:label="AccountFragment"
+        tools:layout="@layout/account"/>
+    <fragment
+        android:id="@+id/shieldFragment"
+        android:name="com.example.ebooker.view.fragment.ShieldFragment"
+        android:label="ShieldFragment"
+        tools:layout="@layout/shield"/>
+</navigation>
