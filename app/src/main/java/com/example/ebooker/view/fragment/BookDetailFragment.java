@@ -24,13 +24,7 @@ public class BookDetailFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.book_details, container, false);
-        TextView book_name = view.findViewById(R.id.book_name);
-        TextView book_price = view.findViewById(R.id.book_price);
-        Bundle bundle = getArguments();
-        Book book = bundle.getSerializable("book", Book.class);
 
-        book_name.setText(book.getName());
-        book_price.setText(book.getPrice().toString());
         return view;
     }
 }

@@ -66,9 +66,6 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.DataVi
         public DataViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            book_name = (TextView) itemView.findViewById(R.id.book_name);
-            book_price = (TextView) itemView.findViewById(R.id.book_price);
-            cardView = (CardView) itemView.findViewById(R.id.book_container);
         }
     }
 }
