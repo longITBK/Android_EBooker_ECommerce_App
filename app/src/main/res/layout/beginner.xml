@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager"
+        android:id="@+id/vp_login_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="View Pager"
