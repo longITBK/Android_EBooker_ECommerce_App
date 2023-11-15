@@ -8,15 +8,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ebooker.R;
-import com.example.ebooker.model.Book;
-import com.example.ebooker.view.adapter.HomeListAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ShieldFragment extends Fragment {
 
