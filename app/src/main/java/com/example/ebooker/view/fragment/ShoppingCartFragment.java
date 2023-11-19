@@ -41,7 +41,7 @@ public class ShoppingCartFragment extends Fragment {
     }
 
     public void getData(String accessToken, String cookie) {
-        RetrofitClient.getInstance().getMyAPI().create(Book_API.class).getCartItem(accessToken, cookie).enqueue(new Callback<List<CartItem>>() {
+        RetrofitClient.getInstance().getMyAPI().create(Book_API.class).getCartItemByCustomer(accessToken, cookie).enqueue(new Callback<List<CartItem>>() {
             @Override
             public void onResponse(Call<List<CartItem>> call, Response<List<CartItem>> response) {
                 if (response.isSuccessful()) {

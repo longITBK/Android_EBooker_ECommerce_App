@@ -14,5 +14,5 @@ public interface Book_API {
     Call<List<Book>> getBooks();
 
     @GET("cart")
-    Call<List<CartItem>> getCartItem(@Header("Authorization") String authToken, @Header("Cookie") String cookie);
+    Call<List<CartItem>> getCartItemByCustomer(@Header("Authorization") String authToken, @Header("Cookie") String cookie);
 }
