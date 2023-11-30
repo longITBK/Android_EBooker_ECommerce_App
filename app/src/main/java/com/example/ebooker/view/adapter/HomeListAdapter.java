@@ -10,42 +10,23 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ebooker.R;
 import com.example.ebooker.model.Book;
-import com.example.ebooker.view.fragment.BookDetailFragment;
 
 import java.util.List;
 
 public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.DataViewHolder> {
-
-    private List<Book> books;
-    private Context context;
+    Context context;
+    List<Book> books;
     FragmentManager fragmentManager;
 
-    public HomeListAdapter(List<Book> books, Context context, FragmentManager fragmentManager) {
-        this.books = books;
+    public HomeListAdapter(Context context, List<Book> books, FragmentManager fragmentManager) {
         this.context = context;
+        this.books = books;
         this.fragmentManager = fragmentManager;
-    }
-
-    public List<Book> getBooks() {
-        return books;
-    }
-
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
-
-    public Context getContext() {
-        return context;
-    }
-
-    public void setContext(Context context) {
-        this.context = context;
     }
 
     @NonNull
@@ -58,6 +39,7 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.DataVi
     @Override
     public void onBindViewHolder(@NonNull HomeListAdapter.DataViewHolder holder, int position) {
         holder.book_name.setText(books.get(position).getName());
+        holder.book_price.setText(books.get(position).getPrice().toString());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,13 +47,6 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.DataVi
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("book", book);
                 Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_bookDetailFragment2, bundle);
-
-//                BookDetailFragment bookDetailFragment = new BookDetailFragment(books.get(position));
-//
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.main_activity, bookDetailFragment);
-//                fragmentTransaction.addToBackStack(null);
-//                fragmentTransaction.commit();
             }
         });
     }
@@ -85,13 +60,12 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.DataVi
     public static class DataViewHolder extends RecyclerView.ViewHolder {
 
         private TextView book_name;
+        private TextView book_price;
         private CardView cardView;
 
         public DataViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            book_name = (TextView) itemView.findViewById(R.id.book_name_label);
-            cardView = (CardView) itemView.findViewById(R.id.book_container);
         }
     }
 }
